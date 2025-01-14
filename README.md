@@ -1,7 +1,10 @@
 # CyberScope - A Comprehensive Analysis Repository
 
 ## Overview
-Welcome to the **CyberScope - A Comprehensive Analysis Repository**, a centralized resource for collecting, analyzing, and experimenting with publicly available datasets in the cybersecurity domain. This repository is designed to facilitate exploratory data analysis, model building, and research for a wide variety of use cases, including intrusion detection, malware analysis, network traffic monitoring, phishing detection, and more.
+Welcome to the **CyberScope - A Comprehensive Analysis Repository**, a centralized resource for collecting, analyzing,
+and experimenting with publicly available datasets in the cybersecurity domain. This repository is designed to facilitate
+exploratory data analysis, model building, and research for a wide variety of use cases, including intrusion detection,
+malware analysis, network traffic monitoring, phishing detection, and more.
 
 ## Objectives
 This repository serves as a one-stop resource to:
@@ -58,13 +61,75 @@ The following categories of datasets are included in this repository:
 ---
 
 ## Repository Structure
+
 ```plaintext
-├── datasets/       # Links to datasets and metadata files
-├── notebooks/      # Jupyter notebooks for exploratory data analysis (EDA)
-├── scripts/        # Python scripts for data preprocessing and analysis
-├── models/         # Pre-trained and custom models for various tasks
-├── results/        # Outputs, logs, and visualizations
-└── README.md       # Repository overview and documentation
+├── dags/                      # Dagster pipelines for orchestrating data workflows
+│   ├── pipelines/             # Defined pipelines for ETL, analysis, and ML tasks
+│   ├── solids/                # Modular pipeline components for data processing steps
+│   └── resources/             # Config files and resource definitions for Dagster
+│   └── example.yaml           # Example YAML configuration files for the Dagster pipelines
+│
+├── datasets/                  # Dataset links, metadata, and raw data storage
+│   ├── raw/                   # Raw, unprocessed datasets
+│   ├── processed/             # Cleaned and transformed datasets
+│   └── metadata/              # Dataset descriptions, schemas, and source information
+│
+├── notebooks/                 # Jupyter notebooks for exploratory analysis and testing
+│   ├── eda/                   # Notebooks for Exploratory Data Analysis (EDA)
+│   ├── graph-analysis/        # Graph-based analysis notebooks
+│   └── model-experiments/     # Notebooks for model training and evaluation
+│
+├── scripts/                   # Python scripts for various tasks
+│   ├── ingestion/             # Scripts for data ingestion from external sources (Kaggle, APIs)
+│   ├── preprocessing/         # Scripts for data cleaning and feature engineering
+│   ├── analysis/              # Scripts for statistical and graph-based analysis
+│   ├── visualization/         # Scripts for data visualization and dashboards
+│   └── utils/                 # Utility functions and helpers (logging, config parsing)
+│
+├── models/                    # Model files and training logic
+│   ├── pre-trained/           # Pre-trained models for baseline comparisons
+│   ├── custom/                # Custom models developed for the project
+│   └── pipelines/             # ML model pipelines integrated with Dagster
+│
+├── graphs/                    # Graph-related analysis and data representation
+│   ├── graph_data/            # Graph datasets and adjacency matrices
+│   ├── graph_scripting/       # Graph-specific Python scripts (NetworkX, PyGraph, etc.)
+│   └── graph_visualizations/  # Graph plots and visualizations
+│
+├── results/                   # Outputs and results from various runs
+│   ├── logs/                  # Logs from pipeline runs and error tracking
+│   ├── visualizations/        # Plots and charts generated from the analysis
+│   └── reports/               # Summarized results and insights (PDF, Markdown, etc.)
+│
+├── duckdb/                    # DuckDB database integration and queries
+│   ├── db/                    # DuckDB database files
+│   ├── queries/               # DuckDB SQL queries for data analysis
+│   └── utils/                 # Scripts for querying and managing the DuckDB database
+│   └── schema/                # Schema definitions for the DuckDB database
+│
+├── tests/                     # Unit tests and integration tests
+│   ├── pipelines/             # Tests for Dagster pipelines
+│   ├── data_quality/          # Data validation tests
+│   └── models/                # Tests for model accuracy and consistency
+│
+├── environments/              # Environment and dependency management
+│   └── requirements.txt       # Python package requirements
+│   └── ...                    # Other environment files
+│
+├── configs/                   # Configuration files for orchestrators and tools
+│   ├── dagster.yaml           # Dagster configuration
+│   ├── duckdb.yaml            # DuckDB connection settings
+│   └── ml_config.yaml         # ML model and training configurations
+│
+├── docs/                      # Project documentation
+│   ├── architecture.md        # System architecture and design choices
+│   ├── usage_guide.md         # How to run pipelines and scripts
+│   └── CONTRIBUTING.md        # Contribution guidelines
+│
+├── .gitignore                 # Ignore unnecessary files and folders
+├── LICENSE                    # License information
+├── README.md                  # Project overview and usage instructions
+└── Makefile                   # Automate common tasks like `make test`, `make run`
 ```
 
 ---
