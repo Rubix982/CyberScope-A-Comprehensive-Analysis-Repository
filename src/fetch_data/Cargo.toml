@@ -1,0 +1,10 @@
+[package]
+name = "fetch_data"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = "0.12.12"
+tokio = { version = "1.0.0", features = ["full"] }
+tokio-macros = "2.4.0"
+anyhow = "1.0.0"
